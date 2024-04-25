@@ -1,7 +1,5 @@
 import java.awt.Desktop;
 import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 interface VPNClient {
@@ -63,7 +61,6 @@ class VPNClientImpl implements VPNClient {
 class VPNServer {
     private int port;
     private boolean isRunning;
-    private Map<String, VPNClient> clients;
     private Object lock = new Object();
     private boolean websiteOpened = false;
     private String serverAddress;
